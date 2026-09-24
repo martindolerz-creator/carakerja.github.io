@@ -1,361 +1,704 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Laundry Cepat & Bersih</title>
+<title>Platform Terbaik - Mulai Sekarang</title>
 
-    <meta name="description" content="Laundry cepat, bersih dan wangi. Pesan sekarang dengan mudah.">
+<meta name="description" content="Temukan layanan terbaik dengan proses mudah, cepat, dan praktis.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        /* HERO */
-        .hero {
-            min-height: 620px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            background:
-                linear-gradient(rgba(0, 75, 150, .78), rgba(0, 120, 180, .78)),
-                url("https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
-        }
+/* HEADER */
 
-        .hero-content {
-            max-width: 750px;
-            margin: auto;
-        }
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 20px 0;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.15;
-        }
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 16px 35px;
-            background: #ffd43b;
-            color: #111;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 50px;
-            transition: .2s;
-        }
+.logo span {
+    color: #ffd23f;
+}
 
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: .9;
-        }
+.header-btn {
+    text-decoration: none;
+    color: #111;
+    background: #ffd23f;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+}
 
-        /* SECTION */
-        section {
-            padding: 70px 0;
-        }
+/* HERO */
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+.hero {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+    background:
+        linear-gradient(
+            rgba(5,5,10,.82),
+            rgba(10,10,15,.95)
+        ),
+        url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
 
-        .section-title p {
-            color: #666;
-        }
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 60px;
+}
 
-        /* FEATURES */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.badge {
+    display: inline-block;
+    background: rgba(255,210,63,.12);
+    border: 1px solid rgba(255,210,63,.5);
+    color: #ffd23f;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-        .feature {
-            background: white;
-            padding: 35px 25px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,.07);
-        }
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
 
-        .icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
+.hero h1 span {
+    color: #ffd23f;
+}
 
-        .feature h3 {
-            margin-bottom: 10px;
-        }
+.hero p {
+    font-size: 19px;
+    color: #d0d0d0;
+    max-width: 680px;
+    margin: 0 auto 32px;
+}
 
-        .feature p {
-            color: #666;
-        }
+.btn {
+    display: inline-block;
+    padding: 16px 38px;
+    background: #ffd23f;
+    color: #111;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+    font-size: 17px;
+    transition: .25s;
+}
 
-        /* HOW IT WORKS */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,210,63,.25);
+}
 
-        .step {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-        }
+/* FEATURES */
 
-        .number {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: #0878c9;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 22px;
-            font-weight: bold;
-        }
+section {
+    padding: 80px 0;
+}
 
-        /* CTA */
-        .cta {
-            background: #0878c9;
-            color: white;
-            text-align: center;
-        }
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
 
-        .cta h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
 
-        .cta p {
-            margin-bottom: 25px;
-            font-size: 18px;
-        }
+.section-title p {
+    color: #aaa;
+}
 
-        /* FOOTER */
-        footer {
-            background: #111;
-            color: #aaa;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-        }
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
 
-        /* MOBILE */
-        @media (max-width: 768px) {
+.card {
+    background: #15151b;
+    border: 1px solid #25252d;
+    border-radius: 18px;
+    padding: 32px 25px;
+    text-align: center;
+    transition: .25s;
+}
 
-            .hero {
-                min-height: 560px;
-            }
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ffd23f;
+}
 
-            .hero h1 {
-                font-size: 36px;
-            }
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
 
-            .hero p {
-                font-size: 17px;
-            }
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
 
-            .features,
-            .steps {
-                grid-template-columns: 1fr;
-            }
+.card p {
+    color: #aaa;
+    font-size: 15px;
+}
 
-            .section-title h2 {
-                font-size: 28px;
-            }
+/* BANNER */
 
-            .cta h2 {
-                font-size: 30px;
-            }
-        }
-    </style>
+.banner {
+    padding: 0 0 80px;
+}
+
+.banner-box {
+    border-radius: 22px;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(10,10,15,.6),
+            rgba(10,10,15,.85)
+        ),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+}
+
+.banner-content {
+    padding: 40px;
+}
+
+.banner h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+/* STEPS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step {
+    text-align: center;
+    padding: 25px;
+}
+
+.number {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffd23f;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* FAQ */
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+}
+
+details {
+    background: #15151b;
+    border: 1px solid #25252d;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    padding: 18px 20px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    color: #aaa;
+    padding-top: 12px;
+}
+
+/* CTA */
+
+.cta {
+    background:
+        linear-gradient(
+            135deg,
+            #17171d,
+            #0d0d11
+        );
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #aaa;
+    margin-bottom: 28px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #070709;
+    border-top: 1px solid #202027;
+    padding: 30px 0;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .header-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="container hero-content">
+<!-- HEADER -->
 
-            <h1>
-                Laundry Bersih, Wangi & Cepat
-            </h1>
+<header>
+    <div class="container header-inner">
+
+        <div class="logo">
+            BRAND<span>NAME</span>
+        </div>
+
+        <a href="LINK_TUJUAN"
+           class="header-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            MULAI SEKARANG
+        </a>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="badge">
+            ✦ MUDAH • CEPAT • PRAKTIS
+        </div>
+
+        <h1>
+            Temukan Pengalaman
+            <span>Terbaik</span>
+            Dalam Satu Tempat
+        </h1>
+
+        <p>
+            Nikmati proses yang sederhana dan praktis.
+            Semua dirancang agar kamu dapat memulai dengan mudah.
+        </p>
+
+        <a href="LINK_TUJUAN"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            MULAI SEKARANG →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- KEUNGGULAN -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Kenapa Memilih Kami?
+            </h2>
 
             <p>
-                Percayakan pakaian Anda kepada kami.
-                Proses cepat, hasil bersih dan siap digunakan kembali.
+                Kami mengutamakan kemudahan dan pengalaman
+                pengguna dalam setiap proses.
             </p>
 
-            <a
-                href="LINK_TUJUAN"
-                class="btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                PESAN SEKARANG
-            </a>
-
         </div>
-    </header>
 
 
-    <!-- KEUNGGULAN -->
-    <section>
+        <div class="features">
 
-        <div class="container">
+            <div class="card">
 
-            <div class="section-title">
-                <h2>Kenapa Pilih Kami?</h2>
+                <div class="icon">⚡</div>
+
+                <h3>
+                    Proses Cepat
+                </h3>
+
                 <p>
-                    Kami memberikan pelayanan terbaik untuk kebutuhan laundry Anda.
+                    Proses dibuat sederhana sehingga
+                    dapat dilakukan dengan cepat.
                 </p>
-            </div>
-
-            <div class="features">
-
-                <div class="feature">
-                    <div class="icon">🧺</div>
-                    <h3>Bersih Maksimal</h3>
-                    <p>
-                        Pakaian dicuci dengan proses yang bersih
-                        dan diperhatikan dengan baik.
-                    </p>
-                </div>
-
-                <div class="feature">
-                    <div class="icon">⚡</div>
-                    <h3>Proses Cepat</h3>
-                    <p>
-                        Kami mengutamakan proses pengerjaan
-                        yang cepat dan praktis.
-                    </p>
-                </div>
-
-                <div class="feature">
-                    <div class="icon">🌸</div>
-                    <h3>Wangi & Rapi</h3>
-                    <p>
-                        Pakaian selesai dalam kondisi wangi,
-                        rapi dan siap digunakan.
-                    </p>
-                </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <div class="card">
 
+                <div class="icon">🔒</div>
 
-    <!-- CARA KERJA -->
-    <section>
+                <h3>
+                    Praktis
+                </h3>
 
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Cara Kerja</h2>
                 <p>
-                    Pesan laundry dengan mudah dalam beberapa langkah.
+                    Akses mudah dari perangkat desktop
+                    maupun smartphone.
                 </p>
+
             </div>
 
-            <div class="steps">
 
-                <div class="step">
-                    <div class="number">1</div>
-                    <h3>Pesan</h3>
-                    <p>
-                        Klik tombol pesan dan lakukan pemesanan.
-                    </p>
-                </div>
+            <div class="card">
 
-                <div class="step">
-                    <div class="number">2</div>
-                    <h3>Proses</h3>
-                    <p>
-                        Pakaian diproses dan dicuci dengan standar terbaik.
-                    </p>
-                </div>
+                <div class="icon">⭐</div>
 
-                <div class="step">
-                    <div class="number">3</div>
-                    <h3>Selesai</h3>
-                    <p>
-                        Pakaian selesai, bersih, wangi dan siap digunakan.
-                    </p>
-                </div>
+                <h3>
+                    Pengalaman Nyaman
+                </h3>
+
+                <p>
+                    Tampilan sederhana dan mudah
+                    dipahami oleh pengguna.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- CTA -->
-    <section class="cta">
+<!-- BANNER -->
 
-        <div class="container">
+<section class="banner">
 
-            <h2>Siap Laundry Hari Ini?</h2>
+    <div class="container">
+
+        <div class="banner-box">
+
+            <div class="banner-content">
+
+                <h2>
+                    Mulai Sekarang
+                </h2>
+
+                <p>
+                    Jangan lewatkan kesempatan untuk
+                    mencoba layanan kami.
+                </p>
+
+                <a href="LINK_TUJUAN"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LANJUTKAN →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CARA KERJA -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Cara Menggunakan
+            </h2>
 
             <p>
-                Jangan biarkan pakaian menumpuk.
-                Pesan sekarang dan nikmati layanan laundry yang praktis.
+                Hanya membutuhkan beberapa langkah sederhana.
             </p>
-
-            <a
-                href="LINK_TUJUAN"
-                class="btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                PESAN SEKARANG
-            </a>
 
         </div>
 
-    </section>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="number">
+                    1
+                </div>
+
+                <h3>
+                    Klik Tombol
+                </h3>
+
+                <p>
+                    Klik tombol mulai sekarang
+                    pada halaman ini.
+                </p>
+
+            </div>
 
 
-    <!-- FOOTER -->
-    <footer>
-        © 2026 Laundry Bersih. All Rights Reserved.
-    </footer>
+            <div class="step">
 
+                <div class="number">
+                    2
+                </div>
+
+                <h3>
+                    Lanjutkan
+                </h3>
+
+                <p>
+                    Kamu akan diarahkan ke
+                    halaman tujuan.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="number">
+                    3
+                </div>
+
+                <h3>
+                    Selesai
+                </h3>
+
+                <p>
+                    Ikuti informasi dan petunjuk
+                    pada halaman berikutnya.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Pertanyaan Umum
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+            <details>
+                <summary>
+                    Bagaimana cara memulai?
+                </summary>
+
+                <p>
+                    Klik salah satu tombol yang tersedia
+                    dan ikuti langkah berikutnya.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    Apakah bisa menggunakan HP?
+                </summary>
+
+                <p>
+                    Ya. Halaman ini dibuat responsive
+                    sehingga dapat digunakan melalui smartphone.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    Bagaimana jika ingin mengetahui lebih lanjut?
+                </summary>
+
+                <p>
+                    Silakan klik tombol mulai sekarang
+                    untuk menuju halaman tujuan.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Siap Untuk Mulai?
+        </h2>
+
+        <p>
+            Klik tombol di bawah untuk melanjutkan.
+        </p>
+
+        <a href="LINK_TUJUAN"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            MULAI SEKARANG →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 BRANDNAME. All Rights Reserved.
+
+    </div>
+
+</footer>
 
 </body>
 </html>
+```
