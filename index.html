@@ -1,715 +1,229 @@
-```html
+
+
 <!DOCTYPE html>
-<html lang="id">
+<html amp lang="id-ID">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DOLLAR KILAT - Mulai Sekarang</title>
-
-<meta name="description" content="DOLLAR KILAT - Nikmati pengalaman mudah, cepat dan praktis.">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#070707;
-    color:#fff;
-    line-height:1.6;
-}
-
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* HEADER */
-
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:10;
-    padding:18px 0;
-}
-
-.header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:1px;
-    color:#fff;
-}
-
-.logo span{
-    color:#ffd43b;
-}
-
-.header-btn{
-    text-decoration:none;
-    color:#111;
-    background:#ffd43b;
-    padding:10px 20px;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-/* HERO */
-
-.hero{
-    min-height:720px;
-    display:flex;
-    align-items:center;
-    text-align:center;
-    position:relative;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.75),
-        rgba(0,0,0,.93)
-    ),
-    url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1800&q=85")
-    center/cover no-repeat;
-}
-
-.hero-content{
-    max-width:850px;
-    margin:auto;
-    padding-top:60px;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 18px;
-    border-radius:30px;
-    border:1px solid #ffd43b;
-    color:#ffd43b;
-    background:rgba(255,212,59,.08);
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-size:62px;
-    line-height:1.05;
-    margin-bottom:22px;
-}
-
-.hero h1 span{
-    color:#ffd43b;
-}
-
-.hero p{
-    max-width:680px;
-    margin:0 auto 32px;
-    color:#d0d0d0;
-    font-size:19px;
-}
-
-.btn{
-    display:inline-block;
-    padding:16px 40px;
-    background:#ffd43b;
-    color:#111;
-    text-decoration:none;
-    border-radius:50px;
-    font-size:17px;
-    font-weight:900;
-    transition:.25s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(255,212,59,.25);
-}
-
-/* SECTION */
-
-section{
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 45px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#999;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.card{
-    background:#121212;
-    border:1px solid #242424;
-    border-radius:18px;
-    padding:35px 25px;
-    text-align:center;
-    transition:.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#ffd43b;
-}
-
-.icon{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    font-size:21px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#999;
-    font-size:15px;
-}
-
-/* PROMO BANNER */
-
-.promo{
-    padding-top:0;
-}
-
-.promo-box{
-    min-height:300px;
-    border-radius:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-
-    background:
-    linear-gradient(
-        rgba(15,15,15,.7),
-        rgba(15,15,15,.9)
-    ),
-    url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
-}
-
-.promo-content{
-    padding:40px;
-}
-
-.promo h2{
-    font-size:40px;
-    margin-bottom:12px;
-}
-
-.promo p{
-    color:#ddd;
-    margin-bottom:25px;
-}
-
-/* STEPS */
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.step{
-    text-align:center;
-    padding:25px;
-}
-
-.number{
-    width:58px;
-    height:58px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 18px;
-    border-radius:50%;
-    background:#ffd43b;
-    color:#111;
-    font-size:21px;
-    font-weight:bold;
-}
-
-.step h3{
-    margin-bottom:8px;
-}
-
-.step p{
-    color:#999;
-}
-
-/* FAQ */
-
-.faq{
-    max-width:800px;
-    margin:auto;
-}
-
-details{
-    background:#121212;
-    border:1px solid #242424;
-    border-radius:12px;
-    padding:18px 20px;
-    margin-bottom:12px;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:bold;
-}
-
-details p{
-    color:#999;
-    padding-top:12px;
-}
-
-/* CTA */
-
-.cta{
-    text-align:center;
-    background:
-    linear-gradient(
-        135deg,
-        #171717,
-        #090909
-    );
-}
-
-.cta h2{
-    font-size:44px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    color:#999;
-    margin-bottom:28px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#030303;
-    border-top:1px solid #202020;
-    text-align:center;
-    padding:30px 0;
-    color:#666;
-    font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .hero{
-        min-height:650px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .features,
-    .steps{
-        grid-template-columns:1fr;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .promo h2{
-        font-size:31px;
-    }
-
-    .cta h2{
-        font-size:34px;
-    }
-
-    .header-btn{
-        padding:8px 15px;
-        font-size:13px;
-    }
-}
-</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLXTOTO - Bandar Slot Online Eksklusif dengan RTP Live Stabil dan Update Game Jackpot Terbaru</title>
+    <meta name="description"
+        content="Pengalaman bermain slot paling mengesankan dengan layanan eksklusif OLXTOTO, menawarkan RTP live yang stabil dan update jackpot terbaru setiap hari, siap memberikan kemenangan maksimal bagi member setia" />
+    <meta name="robots" content="index,follow" />
+    <link href="https://olxstgimages.b-cdn.net/logo-olxtoto.png" rel="shortcut icon"
+        type="image/x-icon" />
+    <link rel="canonical" href="https://forged.fitness/" />
+    <meta property="og:url" content="https://forged.fitness/" />
+    <meta property="og:site_name" content="BANDAR TOTO MACAU" />
+    <meta property="og:image:alt" content="BANDAR TOTO MACAU" />
+    <meta property="og:image" content="https://i.postimg.cc/FzH7sRwG/7be56faf-f66b-4005-a9c1-722d8ec5922d.png" />
+
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+    <style amp-custom>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: monospace;
+            position: relative;
+            background: #000000;
+            background-image: radial-gradient(#202020 5%, transparent 50%);
+            background-size: 5px 5px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 400px;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .welcome {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .welcome h1 {
+            font-size: 12px;
+            color: #fff;
+            overflow: hidden;
+            border-right: .15em solid #fbf4a0;
+            /* The typwriter cursor */
+            white-space: nowrap;
+            letter-spacing: .09em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #fbf4a0;
+            }
+        }
+
+        .banner {
+            border-radius: 10px;
+        }
+
+        .btn-login {
+            padding: 10px;
+            color: #000000;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(to bottom, #ffc200 100%, rgb(0 0 0) 0%);
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px #ffe000;
+        }
+
+        .btn-daftar {
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(to bottom, #ff0000 100%, rgb(255, 0, 0) 0%);
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #ffffff96;
+        }
+
+        .nagaterbang {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
-
-<header>
-<div class="container header-inner">
-
-    <div class="logo">
-        DOLLAR<span>KILAT</span>
-    </div>
-
-    <a href="https://t.me/dollarkilat"
-       class="header-btn"
-       target="_blank"
-       rel="noopener noreferrer">
-        MASUK
-    </a>
-
-</div>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container hero-content">
-
-    <div class="badge">
-        ⚡ DOLLAR KILAT
-    </div>
-
-    <h1>
-        Selamat Datang di
-        <span>DOLLAR KILAT</span>
-    </h1>
-
-    <p>
-        Nikmati pengalaman yang mudah, cepat dan praktis
-        melalui platform DOLLAR KILAT.
-    </p>
-
-    <a href="https://t.me/dollarkilat"
-       class="btn"
-       target="_blank"
-       rel="noopener noreferrer">
-        MULAI SEKARANG →
-    </a>
-
-</div>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-title">
-
-        <h2>
-            Kenapa DOLLAR KILAT?
-        </h2>
-
-        <p>
-            Dirancang dengan tampilan sederhana
-            agar mudah digunakan.
-        </p>
-
-    </div>
-
-
-    <div class="features">
-
-        <div class="card">
-
-            <div class="icon">⚡</div>
-
-            <h3>
-                Cepat
-            </h3>
-
-            <p>
-                Akses halaman dengan cepat
-                dan proses yang sederhana.
-            </p>
-
+    <div class="container">
+        <header>
+            <center><a href="https://yakale.me/LoginOlx1"><amp-img id="image" class="animated tada infinite slower"
+                        src="https://photoku.io/images/2024/11/22/LOGO-CARD.gif"
+                        alt="BANDAR TOTO MACAU" width="260" height="100" layout="intrinsic"></amp-img></a>
+        </header>
+        <div class="welcome">
+            <h1>OLXTOTO - Bandar Slot Online Eksklusif dengan RTP Live Stabil dan Update Game Jackpot Terbaru</h1>
         </div>
 
+        <amp-img src="https://i.postimg.cc/FzH7sRwG/7be56faf-f66b-4005-a9c1-722d8ec5922d.png" width="500"
+            height="500" layout="intrinsic" class="banner"></amp-img>
 
-        <div class="card">
+        <a href="https://yakale.me/loginvtr" target="_blank" rel="noreferrer noopener" role="button"
+            class="btn-login">LOGIN</a>
+        <a href="https://yakale.me/loginvtr" target="_blank" rel="noreferrer noopener" role="button"
+            class="btn-daftar">DAFTAR</a>
 
-            <div class="icon">📱</div>
-
-            <h3>
-                Mobile Friendly
-            </h3>
-
-            <p>
-                Nyaman digunakan melalui
-                smartphone maupun desktop.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🔒</div>
-
-            <h3>
-                Praktis
-            </h3>
-
-            <p>
-                Navigasi sederhana sehingga
-                mudah dipahami.
-            </p>
-
-        </div>
-
+        <p class="copyright">© 2025 • <a style="color: #ffffff;" href="https://forged.fitness/">OLXTOTO TEAM</a> •
+            All Rights Reserved.</p>
     </div>
-
-</div>
-
-</section>
-
-
-<!-- PROMO -->
-
-<section class="promo">
-
-<div class="container">
-
-    <div class="promo-box">
-
-        <div class="promo-content">
-
-            <h2>
-                Mulai Bersama DOLLAR KILAT
-            </h2>
-
-            <p>
-                Klik tombol di bawah untuk melanjutkan
-                ke halaman berikutnya.
-            </p>
-
-            <a href="https://t.me/dollarkilat"
-               class="btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                LANJUTKAN →
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- STEPS -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-title">
-
-        <h2>
-            Cara Menggunakan
-        </h2>
-
-        <p>
-            Ikuti langkah sederhana berikut.
-        </p>
-
-    </div>
-
-
-    <div class="steps">
-
-        <div class="step">
-
-            <div class="number">
-                1
-            </div>
-
-            <h3>
-                Klik Tombol
-            </h3>
-
-            <p>
-                Tekan tombol mulai sekarang
-                yang tersedia di halaman.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="number">
-                2
-            </div>
-
-            <h3>
-                Masuk
-            </h3>
-
-            <p>
-                Kamu akan diarahkan menuju
-                halaman tujuan.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="number">
-                3
-            </div>
-
-            <h3>
-                Selesai
-            </h3>
-
-            <p>
-                Ikuti petunjuk yang tersedia
-                pada halaman tujuan.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-title">
-
-        <h2>
-            FAQ
-        </h2>
-
-    </div>
-
-
-    <div class="faq">
-
-        <details>
-
-            <summary>
-                Bagaimana cara memulai?
-            </summary>
-
-            <p>
-                Klik tombol mulai sekarang
-                dan ikuti proses selanjutnya.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                Apakah bisa melalui HP?
-            </summary>
-
-            <p>
-                Ya, halaman ini dirancang agar
-                nyaman digunakan pada perangkat mobile.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                Bagaimana menuju halaman tujuan?
-            </summary>
-
-            <p>
-                Gunakan tombol yang tersedia
-                pada halaman ini.
-            </p>
-
-        </details>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-<div class="container">
-
-    <h2>
-        DOLLAR KILAT
-    </h2>
-
-    <p>
-        Klik tombol di bawah untuk melanjutkan.
-    </p>
-
-    <a href="https://t.me/dollarkilat"
-       class="btn"
-       target="_blank"
-       rel="noopener noreferrer">
-        MULAI SEKARANG →
-    </a>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    © 2026 DOLLAR KILAT. All Rights Reserved.
-
-</footer>
-
 </body>
 </html>
-```
